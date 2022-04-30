@@ -1,0 +1,21 @@
+---
+let { title } = Astro.props;
+---
+
+<html lang="en" class="dark">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link href="/dist/output.css" rel="stylesheet">
+
+	<title>{title}</title>
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+</head>
+<body class="text-black dark:bg-black dark:text-white font-body">
+	<main class="main-content">
+        <slot/>
+	</main>
+	
+</body>
+</html>
