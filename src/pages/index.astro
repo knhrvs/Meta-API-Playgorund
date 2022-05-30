@@ -2,24 +2,19 @@
 import Layout from '../Layout/MainLayout.astro';
 import '../Styles/global.css';
 import Header from '../Component/header.jsx';
-import FbData from '../Component/fetching.astro';
-
+import '../Component/jsConnector.astro';
+// <script hoist>import '../Component/fetching.js'; </script>
 ---
 
 <style>
-/* .cs-title {
-	color: #9147ff;
-	font-size: 5rem;
-} */
+
 </style>
 
-<FbData/>
+
 
 <Layout title="Dashboard">
 
 	<Header title="META API Sandbox/PlayGround"/>
 	
-	<!-- <div class="flex justify-center">
-	  <h1 class="font-header text-[100px]">META API Sandbox/PlayGround</h1>
-	</div> -->
+
 </Layout>
