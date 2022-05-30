@@ -54,7 +54,7 @@
 		
 			var age_range = (Object.values(response.age_range));
 			var age = parseInt(age_range) + 1;
-
+			console.log(response);
 			document.getElementById('Name').innerHTML = "Name: " + response.name;
 			document.getElementById('nickName').innerHTML = "Nickname: " + response.short_name;
 			document.getElementById('Birthday').innerHTML = "Birthday: " + response.birthday;
