@@ -14,9 +14,9 @@ export default function Content() {
                     <div className='my-5'>
                         <div id="Name"></div>
                         <div id="nickName"></div>
-                        <div id="Birthday"></div>
+                        {/* <div id="Birthday"></div>
                         <div id="Age"></div>
-                        <div id="Gender"></div>
+                        <div id="Gender"></div> */}
                     </div>
                 </div>
                 
