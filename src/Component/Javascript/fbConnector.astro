@@ -46,13 +46,20 @@
    }(document, 'script', 'facebook-jssdk'));
 
    function apiCall(){                     
-    console.log('Welcome!  Fetching your information.... ');
     FB.api(
 	'/me',
 	'GET',
 		{"fields":"id,name,first_name,middle_name,last_name,short_name,birthday,age_range,gender"},
 		function(response) {
-			console.log(response);
+		
+			var age_range = (Object.values(response.age_range));
+			var age = parseInt(age_range) + 1;
+
+			document.getElementById('Name').innerHTML = "Name: " + response.name;
+			document.getElementById('nickName').innerHTML = "Nickname: " + response.short_name;
+			document.getElementById('Birthday').innerHTML = "Birthday: " + response.birthday;
+			document.getElementById('Age').innerHTML = "Age: " + age;
+			document.getElementById('Gender').innerHTML = "Gender: " + response.gender;
 
 		}
 	);
