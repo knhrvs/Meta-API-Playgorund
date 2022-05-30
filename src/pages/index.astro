@@ -2,60 +2,13 @@
 import Layout from '../Layout/MainLayout.astro';
 import '../Styles/global.css';
 import Header from '../Component/header.jsx';
+import '../Component/Javascript/fbConnector.astro';
+// import '../Component/Javascript/apiCall.astro';
 ---
 
 <style>
 
 </style>
-
-<script>
-
-	function statusChangeCallback(response) { 
-    console.log('statusChangeCallback');
-    console.log(response);                   
-		if (response.status === 'connected') {   
-		// testAPI();  
-			console.log("connected");
-		} else {                                
-			console.log("Not Connected")
-		}
-  	}
-	
-	 window.checkLoginState = function() {
-		FB.getLoginStatus(function(response) {
-			statusChangeCallback(response);
-			console.log("checkLoginState: "+response);
-		});
-	};
-
-    window.fbAsyncInit = function() {
-    FB.init({
-       	appId      : '1619509128422385',
-		cookie     : true,
-		xfbml      : true,
-		version    : 'v13.0'
-    });
-      
-    FB.AppEvents.logPageView();   
-
-	FB.getLoginStatus(function(response) {
-   	 statusChangeCallback(response);
-	});
-      
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-
-  
-
-</script>
-
 
 <Layout title="Dashboard">
 
@@ -66,5 +19,5 @@ import Header from '../Component/header.jsx';
 		onlogin="checkLoginState();">
 	</fb:login-button>
 
-
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </Layout>
