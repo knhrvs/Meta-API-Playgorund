@@ -49,7 +49,7 @@
     FB.api(
 	'/me',
 	'GET',
-		{"fields":"id,name,first_name,middle_name,last_name,short_name,birthday,age_range,gender"},
+		{"fields":"id,name,first_name,middle_name,last_name,short_name"},
 		function(response) {
 		
 			var age_range = (Object.values(response.age_range));
