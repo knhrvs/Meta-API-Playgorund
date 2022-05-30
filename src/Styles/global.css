@@ -18,3 +18,7 @@
 .main-content {
     padding-top: 5.25rem;
 }
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
