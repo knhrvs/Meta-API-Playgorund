@@ -1,0 +1,26 @@
+---
+import Layout from '../Layout/MainLayout.astro';
+import '../Styles/global.css';
+import Header from '../Component/header.jsx';
+import '../Component/Javascript/fbConnector.astro';
+import Content from '../Component/content.jsx';
+---
+
+<style>
+
+</style>
+
+<Layout title="Dashboard">
+
+	<Header title="META API Sandbox/PlayGround"/>
+	<div class="flex justify-center mt-24">
+		<fb:login-button 
+		  class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="true" data-use-continue-as="false"
+			scope="public_profile,email"
+			onlogin="checkLoginState();">
+		</fb:login-button>
+	</div>
+	
+	<Content/>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+</Layout>
