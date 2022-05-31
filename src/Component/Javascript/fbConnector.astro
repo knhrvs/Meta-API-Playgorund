@@ -53,7 +53,7 @@
     FB.api(
 	'/me',
 	'GET',
-		{"fields":"id,name,short_name,email,birthday"},
+		{"fields":"id,name,short_name,email"},
 		// {"fields":"id,name,short_name,email,birthday,age_range,gender"},
 
 		function(response) {
@@ -64,7 +64,7 @@
 			document.getElementById('Name').innerHTML = "Name: " + response.name;
 			document.getElementById('nickName').innerHTML = "Nickname: " + response.short_name;
 			document.getElementById('Email').innerHTML = "Email: " + response.email;
-			document.getElementById('Birthday').innerHTML = "Birthday: " + response.birthday;
+			// document.getElementById('Birthday').innerHTML = "Birthday: " + response.birthday;
 			// document.getElementById('Age').innerHTML = "Age: " + age;
 			// document.getElementById('Gender').innerHTML = "Gender: " + response.gender;
 

@@ -15,7 +15,7 @@ export default function Content() {
                         <div id="Name"></div>
                         <div id="nickName"></div>
                         <div id="Email"></div>
-                        <div id="Birthday"></div>
+                        {/* <div id="Birthday"></div> */}
                         {/* <div id="Age"></div>
                         <div id="Gender"></div> */}
                     </div>
