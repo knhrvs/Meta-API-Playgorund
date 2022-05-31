@@ -19,6 +19,12 @@
 			statusChangeCallback(response);
 			console.log("checkLoginState: "+response);
 		});
+
+
+		 
+		FB.logout(function(response) {
+			console.log(response);
+		});
 	};
 
     window.fbAsyncInit = function() {
@@ -66,11 +72,8 @@
 	);
   }
 
-  window.checkLogoutState = function() {
-	FB.logout(function(response) {
-		console.log(response);
-	});
-  };
+
+
  
 
 
