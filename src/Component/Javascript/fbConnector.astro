@@ -6,10 +6,14 @@
 	function statusChangeCallback(response) { 
     console.log('statusChangeCallback');
     console.log(response);                   
-		if (response.status === 'connected') {   
+		if (response.status === 'connected') {
+			document.getElementById("logout").style.display = 'block';
+			document.getElementById("logout").addEventListener("click", userLogout);
+			document.getElementById("login").style.display = 'none';                
+
 			apiCall();
 			console.log("connected");
-		} else {                                
+		} else {          
 			console.log("Not Connected")
 		}
   	}
@@ -67,11 +71,14 @@
   }
 
 
-
+  function userLogout(){
  	 FB.logout(function(response) {
+			statusChangeCallback(response)
+			window.location.reload();
 			console.log(response);		
 		});
- 
+	}
+	
 
 
 </script>
