@@ -7,7 +7,7 @@ export default function Content() {
         
         
         <div className='flex place-content-center py-16'>
-            <div className="box-border h-64 w-64 p-7 border-4 rounded-lg mt-5">
+            <div className="box-content h-64 w-64 p-7 border-4 rounded-lg mt-5">
                 <div>
                     <h1>Fetched Information</h1>
 
@@ -15,8 +15,8 @@ export default function Content() {
                         <div id="Name"></div>
                         <div id="nickName"></div>
                         <div id="Email"></div>
-                        {/* <div id="Birthday"></div>
-                        <div id="Age"></div>
+                        <div id="Birthday"></div>
+                        {/* <div id="Age"></div>
                         <div id="Gender"></div> */}
                     </div>
                 </div>
