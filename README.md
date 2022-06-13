@@ -1,3 +1,12 @@
+# Link: https://facebookapiplayground.netlify.app
+
+# Update
+
+```
+  *Only email and nickname are the one being fetch.
+  *Birthday, Age, and Gender are currently disapprove.
+```
+
 # Astro Starter Kit: Minimal
 
 ```
