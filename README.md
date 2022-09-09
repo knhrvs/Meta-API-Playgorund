@@ -4,7 +4,7 @@
 
 ```
   *Facebook : Only email and nickname are the one being fetch.
-  *I decided to add other api integration, probably union bank or lalamove.
+  
 ```
 
 # Astro Starter Kit: Minimal
